@@ -21,7 +21,11 @@ document.querySelector(".b-1").onclick = t1;
 // от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла.
 
 function t2() {
-
+    const out = document.querySelector(".out-2")
+    let str = "";
+    for (let i = 0; i <= 122; i = i + 2)
+        str += i + " "
+    out.innerHTML = str
 }
 
 document.querySelector(".b-2").onclick = t2;
@@ -33,7 +37,12 @@ document.querySelector(".b-2").onclick = t2;
 // от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла.
 
 function t3() {
-
+    const out = document.querySelector(".out-3")
+    let str = ""
+    for (let i = 25; i >= 7; i--) {
+        str += i + " "
+        out.innerHTML = str
+    }
 }
 
 document.querySelector(".b-3").onclick = t3;
@@ -45,7 +54,12 @@ document.querySelector(".b-3").onclick = t3;
 
 
 function t4() {
-
+    const out = document.querySelector(".out-4")
+    let str = ""
+    for (let i = 77; i >= 35; i = i - 3) {
+        str += i + " "
+        out.innerHTML = str
+    }
 }
 
 document.querySelector(".b-4").onclick = t4;
@@ -57,7 +71,16 @@ document.querySelector(".b-4").onclick = t4;
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
 
 function t5() {
-
+    const out = document.querySelector(".out-5")
+    let str = ""
+    for (let i = 1; i <= 17; i++) {
+        if (i % 2 === 0) {
+            str += i + "_**"
+        } else {
+            str += i + "_*"
+        }
+        out.innerHTML = str;
+    }
 }
 
 document.querySelector(".b-5").onclick = t5;
@@ -74,7 +97,13 @@ document.querySelector(".b-5").onclick = t5;
 //
 
 function t6() {
-
+    let str = ""
+    const out = document.querySelector(".out-6")
+    const val = document.querySelector(".i-6").value
+    for (let i = 0; i < val; i++) {
+        str += "******<br>"
+    }
+    out.innerHTML = str
 }
 
 document.querySelector(".b-6").onclick = t6;
@@ -88,7 +117,13 @@ document.querySelector(".b-6").onclick = t6;
 // Задача решается с помощью цикла.
 
 function t7() {
-
+    const out = document.querySelector(".out-7")
+    const val = document.querySelector(".i-7").value
+    let str = ""
+    for (let i = val; i >= 0; i--) {
+        str += i + " "
+    }
+    out.innerHTML = str
 }
 
 document.querySelector(".b-7").onclick = t7;
@@ -103,7 +138,14 @@ document.querySelector(".b-7").onclick = t7;
 // Задача решается с помощью цикла.
 
 function t8() {
-
+    const out = document.querySelector(".out-8")
+    const val1 = document.querySelector(".i-81").value
+    const val2 = document.querySelector(".i-82").value
+    let str = ""
+    for (let i = val1; i <= val2; i++) {
+        str += i + " "
+    }
+    out.innerHTML = str
 }
 
 document.querySelector(".b-8").onclick = t8;
