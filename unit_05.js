@@ -162,7 +162,20 @@ document.querySelector(".b-8").onclick = t8;
 // цикл - один
 
 function t9() {
-
+    const out = document.querySelector(".out-9")
+    const val1 = document.querySelector(".i-91").value
+    const val2 = document.querySelector(".i-92").value
+    let str = ""
+    if (val1 > val2) {
+        for (let i = val2; i <= val1; i++) {
+            str += i + " "
+        }
+    } else {
+        for (let i = val1; i <= val2; i++) {
+            str += i + " "
+        }
+    }
+    out.innerHTML = str
 }
 
 document.querySelector(".b-9").onclick = t9;
@@ -173,7 +186,14 @@ document.querySelector(".b-9").onclick = t9;
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
-
+    const out = document.querySelector(".out-10")
+    let str = ""
+    for (let i = 1950; i <= 2000; i++) {
+        if (i % 2 === 0) {
+            str += i + " "
+        }
+    }
+    out.innerHTML = str
 }
 
 document.querySelector(".b-10").onclick = t10;
@@ -188,7 +208,13 @@ document.querySelector(".b-10").onclick = t10;
 
 
 function t11() {
-
+    const out = document.querySelector(".out-11")
+    const elem = document.querySelectorAll(".div-11")
+    let str = ""
+    for (let i = 0; i < elem.length; i++) {
+        str += elem[i].innerHTML + " "
+    }
+    out.innerHTML = str
 }
 
 document.querySelector(".b-11").onclick = t11;
@@ -201,8 +227,12 @@ document.querySelector(".b-11").onclick = t11;
 
 
 function t12() {
-
+    const div = document.querySelectorAll(".div-12")
+    for (let i = 0; i < div.length; i++) {
+        div[i].style.background = "orange"
+    }
 }
+
 
 document.querySelector(".b-12").onclick = t12;
 
@@ -213,7 +243,10 @@ document.querySelector(".b-12").onclick = t12;
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
 function t13() {
-
+    const elem = document.querySelectorAll(".i-13")
+    for (let i = 0; i < elem.length; i++) {
+        elem[i].value = i + 1
+    }
 }
 
 document.querySelector(".b-13").onclick = t13;
@@ -226,7 +259,13 @@ document.querySelector(".b-13").onclick = t13;
 
 
 function t14() {
-
+    const elem = document.querySelectorAll(".i-14")
+    const out = document.querySelector(".out-14")
+    for (let i = 0; i < elem.length; i++) {
+        if (elem[i].checked) {
+            out.innerHTML = elem[i].value
+        }
+    }
 }
 
 document.querySelector(".b-14").onclick = t14;
@@ -238,7 +277,12 @@ document.querySelector(".b-14").onclick = t14;
 // Подсказка (10 - i) + ' ' + i
 
 function t15() {
-
+    const out = document.querySelector(".out-15")
+    let str = ""
+    for (let i = 10, j = 0; i >= 0; i--, j++) {
+        str += i + " " + j + " ";
+    }
+    out.innerHTML = str
 }
 
 document.querySelector(".b-15").onclick = t15;
